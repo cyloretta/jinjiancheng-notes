@@ -37,7 +37,7 @@
 </head>
 <body>
     <h1>📈 金渐成策略追踪</h1>
-    <p style="color:#888; margin-bottom:20px;">更新时间: 2026-03-02 22:47</p>
+    <p style="color:#888; margin-bottom:20px;">更新时间: 2026-03-02 22:53</p>
 
     <h2>📊 仓位分配</h2>
     <div class="card">
@@ -99,45 +99,61 @@
 
     </div>
 
-    <h2>📈 K线图</h2>
-    <div class="card" style="padding:8px;">
-        <div style="margin-bottom:8px;">
-            <select id="chart-symbol" onchange="updateChart()" style="background:#0f3460;color:#fff;border:1px solid #333;padding:8px;border-radius:6px;width:100%;">
-                <option value="NVDA">NVDA 英伟达</option>
-                <option value="GOOGL">GOOGL 谷歌</option>
-                <option value="MSFT">MSFT 微软</option>
-                <option value="TSM">TSM 台积电</option>
-                <option value="BRK-B">BRK-B 伯克希尔</option>
-                <option value="QQQ">QQQ 纳指100</option>
-                <option value="VOO">VOO 标普500</option>
-            </select>
-        </div>
-        <div id="tradingview-widget" style="height:400px;"></div>
+    <h2>⏰ 价格监控</h2>
+    <div class="card">
+        <table>
+            <tr><th>股票</th><th>计划</th><th>目标区间</th><th>现价</th><th>状态</th></tr>
+
+            <tr>
+                <td>GOOGL<br><span style="color:#888;font-size:0.8em;">谷歌</span></td>
+                <td>卖出</td>
+                <td>$350-$380</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+            <tr>
+                <td>BRK-B<br><span style="color:#888;font-size:0.8em;">伯克希尔</span></td>
+                <td>买入</td>
+                <td>$423-$455</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+            <tr>
+                <td>MSFT<br><span style="color:#888;font-size:0.8em;">微软</span></td>
+                <td>买入</td>
+                <td>$355-$395</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+            <tr>
+                <td>NVDA<br><span style="color:#888;font-size:0.8em;">英伟达</span></td>
+                <td>卖出</td>
+                <td>$240-$240</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+            <tr>
+                <td>CRCL<br><span style="color:#888;font-size:0.8em;">Circle</span></td>
+                <td>买入</td>
+                <td>$40-$45</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+            <tr>
+                <td>TSM<br><span style="color:#888;font-size:0.8em;">台积电</span></td>
+                <td>卖出</td>
+                <td>$400-$400</td>
+                <td>--</td>
+                <td style="color:#888">--</td>
+            </tr>
+
+        </table>
     </div>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script>
-        function updateChart() {
-            const symbol = document.getElementById('chart-symbol').value;
-            document.getElementById('tradingview-widget').innerHTML = '';
-            new TradingView.widget({
-                "width": "100%",
-                "height": 400,
-                "symbol": symbol,
-                "interval": "D",
-                "timezone": "Asia/Shanghai",
-                "theme": "dark",
-                "style": "1",
-                "locale": "zh_CN",
-                "toolbar_bg": "#1a1a2e",
-                "enable_publishing": false,
-                "hide_top_toolbar": true,
-                "hide_legend": false,
-                "save_image": false,
-                "container_id": "tradingview-widget"
-            });
-        }
-        updateChart();
-    </script>
 
     <h2>💼 我的持仓</h2>
     <div class="card">
