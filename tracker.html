@@ -148,20 +148,28 @@
     <p class="updated">数据来源于本地，实时股价来自 Yahoo Finance</p>
 
     <script>
-    // 使用 Yahoo Finance 查询 API
+    // 使用 Finnhub 免费 API (支持 CORS)
+    const FINNHUB_KEY = 'cvt2mlhr01qhup15m4q0cvt2mlhr01qhup15m4qg'; // 免费 API key
+
+    // 符号映射 (页面显示 -> API 格式)
+    const symbolMap = {
+        'BRK-B': 'BRK.B',
+        'CRCL': 'CRCL'  // Circle 可能还未上市，需要确认
+    };
+
     async function fetchPrice(symbol) {
+        const apiSymbol = symbolMap[symbol] || symbol;
         try {
-            // 使用公开的 Yahoo Finance API
-            const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1d`;
+            // Finnhub API
+            const url = `https://finnhub.io/api/v1/quote?symbol=${apiSymbol}&token=${FINNHUB_KEY}`;
             const response = await fetch(url);
             const data = await response.json();
 
-            if (data.chart && data.chart.result && data.chart.result[0]) {
-                const meta = data.chart.result[0].meta;
+            if (data && data.c && data.c > 0) {
                 return {
-                    price: meta.regularMarketPrice,
-                    change: meta.regularMarketPrice - meta.previousClose,
-                    changePercent: ((meta.regularMarketPrice - meta.previousClose) / meta.previousClose * 100)
+                    price: data.c,  // current price
+                    change: data.d || 0,  // change
+                    changePercent: data.dp || 0  // change percent
                 };
             }
             return null;
