@@ -33,11 +33,18 @@
         th { color: #ffd700; }
         .profit-pos { color: #2ecc71; }
         .profit-neg { color: #e74c3c; }
+        .monitor-card { background: #0f3460; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+        .monitor-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .monitor-symbol { font-size: 1.1em; font-weight: bold; color: #fff; }
+        .monitor-tag { padding: 2px 8px; border-radius: 4px; font-size: 0.75em; color: #fff; }
+        .monitor-prices { display: flex; justify-content: space-between; font-size: 0.9em; color: #aaa; }
+        .monitor-current strong { color: #00d4ff; }
+        .monitor-status { text-align: right; font-size: 0.85em; margin-top: 6px; }
     </style>
 </head>
 <body>
     <h1>📈 金渐成策略追踪</h1>
-    <p style="color:#888; margin-bottom:20px;">更新时间: 2026-03-04 22:30</p>
+    <p style="color:#888; margin-bottom:20px;">更新时间: 2026-03-04 22:35</p>
 
     <h2>📊 仓位分配</h2>
     <div class="card">
@@ -66,59 +73,77 @@
 
 
     <h2>⏰ 价格监控</h2>
-    <div class="card">
-        <table>
-            <tr><th>股票</th><th>计划</th><th>目标区间</th><th>现价</th><th>状态</th></tr>
 
-            <tr>
-                <td>GOOGL</td>
-                <td><span class="tag tag-sell">卖出</span></td>
-                <td>$350-$380</td>
-                <td>$301.21</td>
-                <td style="color:#ffd700">🟡 低于目标</td>
-            </tr>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">GOOGL</span>
+            <span class="monitor-tag" style="background:#e74c3c">卖</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $350-$380</span>
+            <span>现价 <strong>$303</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#ffd700">🟡 低于目标</div>
+    </div>
 
-            <tr>
-                <td>NVDA</td>
-                <td><span class="tag tag-sell">卖出</span></td>
-                <td>$240-$240</td>
-                <td>$180.38</td>
-                <td style="color:#ffd700">🟡 低于目标</td>
-            </tr>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">NVDA</span>
+            <span class="monitor-tag" style="background:#e74c3c">卖</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $240-$240</span>
+            <span>现价 <strong>$182</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#ffd700">🟡 低于目标</div>
+    </div>
 
-            <tr>
-                <td>TSM</td>
-                <td><span class="tag tag-sell">卖出</span></td>
-                <td>$400-$400</td>
-                <td>$358.73</td>
-                <td style="color:#ffd700">🟡 低于目标</td>
-            </tr>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">TSM</span>
+            <span class="monitor-tag" style="background:#e74c3c">卖</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $400-$400</span>
+            <span>现价 <strong>$359</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#ffd700">🟡 低于目标</div>
+    </div>
 
-            <tr>
-                <td>BRK-B</td>
-                <td><span class="tag tag-buy">买入</span></td>
-                <td>$423-$455</td>
-                <td>$480.73</td>
-                <td style="color:#888">⚪ 高于目标</td>
-            </tr>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">BRK-B</span>
+            <span class="monitor-tag" style="background:#2ecc71">买</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $423-$455</span>
+            <span>现价 <strong>$481</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#888">⚪ 高于目标</div>
+    </div>
 
-            <tr>
-                <td>CRCL</td>
-                <td><span class="tag tag-buy">买入</span></td>
-                <td>$40-$45</td>
-                <td>$104.60</td>
-                <td style="color:#888">⚪ 高于目标</td>
-            </tr>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">CRCL</span>
+            <span class="monitor-tag" style="background:#2ecc71">买</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $40-$45</span>
+            <span>现价 <strong>$104</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#888">⚪ 高于目标</div>
+    </div>
 
-            <tr>
-                <td>MSFT</td>
-                <td><span class="tag tag-buy">买入</span></td>
-                <td>$355-$395</td>
-                <td>$403.82</td>
-                <td style="color:#888">⚪ 高于目标</td>
-            </tr>
-
-        </table>
+    <div class="monitor-card">
+        <div class="monitor-header">
+            <span class="monitor-symbol">MSFT</span>
+            <span class="monitor-tag" style="background:#2ecc71">买</span>
+        </div>
+        <div class="monitor-prices">
+            <span>目标 $355-$395</span>
+            <span>现价 <strong>--</strong></span>
+        </div>
+        <div class="monitor-status" style="color:#888">--</div>
     </div>
 
     <h2>💼 我的持仓</h2>
