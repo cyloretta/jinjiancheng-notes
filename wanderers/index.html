@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Wanderers - 投资笔记</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wanderers">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="apple-touch-icon" href="../icon-notes.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #00d4ff, #00a8cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        .back-link {
+            display: inline-block;
+            color: #888;
+            text-decoration: none;
+            margin-bottom: 16px;
+            font-size: 0.9em;
+        }
+        .back-link:hover { color: #fff; }
+        .section { margin-bottom: 24px; }
+        .section-title {
+            font-size: 1em;
+            color: #aaa;
+            margin-bottom: 12px;
+            padding-left: 8px;
+            border-left: 3px solid #00d4ff;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        a.month-link {
+            display: block;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 14px 10px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: all 0.2s;
+        }
+        a.month-link:hover, a.month-link:active {
+            background: rgba(0,212,255,0.15);
+            border-color: #00d4ff;
+            transform: scale(1.02);
+        }
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">&larr; 返回首页</a>
+        <h1>The Wanderers</h1>
+        <p class="subtitle">投资笔记</p>
+
+        <div class="section">
+            <div class="section-title">2026</div>
+            <div class="links">
+                <!-- 月度文章链接将在有内容后添加 -->
+            </div>
+            <div class="empty-state">
+                暂无文章，录入后将自动显示
+            </div>
+        </div>
+    </div>
+</body>
+</html>
