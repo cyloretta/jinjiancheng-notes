@@ -6355,3 +6355,19 @@ Failed to get ticker 'SI=F' reason: Failed to perform, curl: (6) Could not resol
 Failed to get ticker 'BTC-USD' reason: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 Failed to get ticker 'CNY=X' reason: Failed to perform, curl: (6) Could not resolve host: query1.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 同步完成
+[main 320aa47] 自动同步: 2026-04-16 12:00
+ Committer: Apple <apple@AppledeMacBook-Pro-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 32 insertions(+), 22 deletions(-)
+fatal: unable to access 'https://github.com/cyloretta/jinjiancheng-notes.git/': Could not resolve host: github.com
